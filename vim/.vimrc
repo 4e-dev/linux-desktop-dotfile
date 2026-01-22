@@ -3,7 +3,6 @@ let mapleader = " "
 filetype plugin indent on
 
 set modelines=0 " security: dont run random vim commands
-set clipboard=unnamedplus " copy to system clipboard
 set nowrap
 
 " show line numbers
@@ -55,6 +54,12 @@ colo dogrun
 
 " mouse
 set mouse=a
+
+" clipboard
+set clipboard=unnamed,unnamedplus " copy to system clipboard
+
+" copy workaround for wayland
+xnoremap <silent> <C-c> :w !wl-copy<CR><CR>
 
 " netrw hotkey
 nnoremap <leader>ef :Ex<CR>
