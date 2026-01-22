@@ -48,9 +48,10 @@ set noshowmatch
 set wildmenu " command-line completion
 
 " colorscheme
+autocmd VimEnter,ColorScheme * hi Normal guibg=NONE ctermbg=NONE | hi EndOfBuffer guibg=NONE ctermbg=NONE
 syntax on
 set background=dark
-colo retrobox
+colo dogrun
 
 " mouse
 set mouse=a
