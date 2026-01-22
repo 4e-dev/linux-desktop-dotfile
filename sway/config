@@ -16,7 +16,7 @@ input type:keyboard {
 # Variables:
 #
 set {
-  $mod Mod4
+  $mod Mod1
   $left h
   $down j
   $up k
