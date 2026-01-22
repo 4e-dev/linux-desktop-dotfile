@@ -1,0 +1,50 @@
+Dotfiles
+========
+
+Personal dotfiles for Wayland setups.
+
+This repo contains my linux configurations.
+It aims to be minimal and be keyboard-driven via Sway.
+
+Directory Overview
+------------------
+
+alacritty/
+    terminal emulator configuration
+
+sway/
+    window manager configuration (like i3)
+
+tmux/
+    terminal multiplexer configuration.
+
+vim/
+    editor configuration.
+
+waybar/
+    status bar configuration for Wayland.
+
+wofi/
+    application launcher configuration.
+
+Usage
+-----
+
+These dotfiles are intended to be symlinked into the appropriate locations
+under ~/.config or ~/, for example:
+
+    ln -s ~/.dotfiles/sway ~/.config/sway
+    ln -s ~/.dotfiles/alacritty ~/.config/alacritty
+
+Adjust paths as needed for your system.
+
+Notes
+-----
+
+- Assumes a Wayland environment
+- Expect to install dependencies manually (sway, waybar, wofi, alacritty, tmux, vim)
+
+License
+-------
+
+Use, copy, and modify however you want.
