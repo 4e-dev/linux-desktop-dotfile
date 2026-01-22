@@ -6,7 +6,11 @@ font pango: Ubuntu Regular 14
 
 output "Samsung Electric Company LU28R55 HCJR901488" scale 1.25
 
-input "type:pointer" accel_profile flat
+input type:pointer {
+    accel_profile flat
+    natural_scroll enabled
+}
+
 input type:keyboard {
     repeat_delay 175
     repeat_rate 45
