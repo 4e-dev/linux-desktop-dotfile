@@ -12,8 +12,15 @@ Directory Overview
 alacritty/
     terminal emulator configuration
 
+ly/
+    login screen
+    NOTE: must be placed under /etc/
+
 sway/
     window manager configuration (like i3)
+
+swaylock/
+    lockscreen
 
 tmux/
     terminal multiplexer configuration.

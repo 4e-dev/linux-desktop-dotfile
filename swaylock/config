@@ -1,0 +1,24 @@
+background-color = "#1e1e2e"
+
+# circle colors
+indicator-idle-color = "#5c5c8a"        # idle state
+indicator-key-color = "#a3be8c"         # key pressed
+indicator-verifying-color = "#88c0d0"   # verifying password
+
+# inner and ring colors
+ring-color = "#4c4c6a"              # default ring
+key-hl-color = "#81a1c1"            # highlight on key press
+text-color = "#d8dee9"              # optional text
+
+# show the circular unlock indicator in the center
+indicator-radius = 100
+indicator-thickness = 7
+
+# SHOW A SMALL RING ANIMATION WHEN VERIFYING PASSWORD
+show-failed-attempts = true
+blur: 5                             # optional, blur background (Wayland compositor support)
+
+# -------- Others --------
+clock-format = "%I:%M"              # uncomment to show time
+screenshots = false                 # prevent screenshots for security
+
