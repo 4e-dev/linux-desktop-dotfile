@@ -1,6 +1,24 @@
-[window]
-opacity = 0.95
-decorations="none"
+[colors]
+normal.black   = "#073642"
+normal.red     = "#dc322f"
+normal.green   = "#859900"
+normal.yellow  = "#b58900"
+normal.blue    = "#268bd2"
+normal.magenta = "#d33682"
+normal.cyan    = "#2aa198"
+normal.white   = "#eee8d5"
+
+bright.black   = "#002b36"
+bright.red     = "#cb4b16"
+bright.green   = "#586e75"
+bright.yellow  = "#657b83"
+bright.blue    = "#839496"
+bright.magenta = "#6c71c4"
+bright.cyan    = "#93a1a1"
+bright.white   = "#fdf6e3"
+
+[cursor]
+style = {shape = "Block"}
 
 [font]
 size = 20
@@ -9,8 +27,12 @@ bold           =  { family = "UbuntuMono Nerd Font" }
 italic         =  { family = "UbuntuMono Nerd Font" }
 bold_italic    =  { family = "UbuntuMono Nerd Font" }
 
-[cursor]
-style = {shape = "Block"}
+[general]
+import = ["themes/solarized_dark.toml"]
 
 [mouse]
 hide_when_typing = true
+
+[window]
+opacity = 1.00
+decorations="none"
