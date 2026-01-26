@@ -22,10 +22,7 @@ style = {shape = "Block"}
 
 [font]
 size = 20
-normal         =  { family = "UbuntuMono Nerd Font" }
-bold           =  { family = "UbuntuMono Nerd Font" }
-italic         =  { family = "UbuntuMono Nerd Font" }
-bold_italic    =  { family = "UbuntuMono Nerd Font" }
+normal = {family ="B612Mono", style = "regular"}
 
 [general]
 import = ["themes/solarized_dark.toml"]
