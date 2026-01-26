@@ -28,7 +28,7 @@ set {
 
   $resize_factor 40px
 
-  $file wofi --insensitive --show run
+  $file wofi --insensitive --show drun
   $browser firefox
   $private-browser firefox --private-window
 }
