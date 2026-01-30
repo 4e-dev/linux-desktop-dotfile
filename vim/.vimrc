@@ -3,6 +3,8 @@ call plug#begin()
 "    :PlugInstall to install the plugins
 "    :PlugUpdate to install or update the plugins
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " automatically enable goyo
