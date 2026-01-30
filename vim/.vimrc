@@ -15,17 +15,12 @@ set nocompatible
 set modelines=0 " security: dont run random vim commands
 set wrap
 set textwidth=100
+set encoding=utf-8 " encoding
 
 " show line numbers
-set ruler
-augroup numbertoggle
-    autocmd!
-    autocmd VimEnter * set number relativenumber
-    autocmd BufEnter,FocusGained,InsertLeave * set number relativenumber
-    autocmd BufLeave,FocusLost,InsertEnter   * set number norelativenumber
-augroup END
-
-set encoding=utf-8 " encoding
+set number
+autocmd VimEnter * set relativenumber
+autocmd VimEnter * set ruler
 
 " indentation
 set expandtab      " convert tabs (\t) to spaces
@@ -72,14 +67,16 @@ set mouse=a
 set clipboard=unnamed,unnamedplus " copy to system clipboard
 
 " another way to quit (quitting all buffers is to handle closing Goyo)
+nnoremap <leader>d :w<CR>
 nnoremap <leader>q :wqa<CR>
 nnoremap ZZ :wqa<CR>
 
 " copy workaround for wayland
-xnoremap <silent> <C-c> :w !wl-copy<CR><CR>
+xnoremap "+y y:call system("wl-copy", @")<CR>
+nnoremap "+p :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<CR>p
 
 " netrw hotkey
-nnoremap <leader>ef :Ex<CR>
+nnoremap <leader>f :Ex<CR>
 
 " removes trailing white spaces
 nnoremap <leader>ws :%s/\s\+$//e<CR>:noh<CR>
