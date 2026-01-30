@@ -1,14 +1,27 @@
-set nocompatible
-let mapleader = " "
-filetype plugin indent on
+call plug#begin()
+" list plugins here
+"    :PlugInstall to install the plugins
+"    :PlugUpdate to install or update the plugins
+Plug 'junegunn/goyo.vim'
+call plug#end()
 
+" automatically enable goyo
+autocmd VimEnter * Goyo 100
+
+let mapleader = " "
+set nocompatible
 set modelines=0 " security: dont run random vim commands
-set nowrap
+set wrap
+set textwidth=100
 
 " show line numbers
-set number
-set relativenumber
 set ruler
+augroup numbertoggle
+    autocmd!
+    autocmd VimEnter * set number relativenumber
+    autocmd BufEnter,FocusGained,InsertLeave * set number relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter   * set number norelativenumber
+augroup END
 
 set encoding=utf-8 " encoding
 
@@ -47,16 +60,18 @@ set noshowmatch
 set wildmenu " command-line completion
 
 " colorscheme
-" autocmd VimEnter,ColorScheme * hi Normal guibg=NONE ctermbg=NONE | hi EndOfBuffer guibg=NONE ctermbg=NONE
-syntax enable
 set background=dark
-colorscheme flattened_dark
+colorscheme solarized
 
 " mouse
 set mouse=a
 
 " clipboard
 set clipboard=unnamed,unnamedplus " copy to system clipboard
+
+" another way to quit (quitting all buffers is to handle closing Goyo)
+nnoremap <leader>q :wqa<CR>
+nnoremap ZZ :wqa<CR>
 
 " copy workaround for wayland
 xnoremap <silent> <C-c> :w !wl-copy<CR><CR>
